@@ -10,7 +10,11 @@ export default function AppNavigation(): ReactElement {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="ImagesIndex">
-        <Stack.Screen name="ImagesIndex" component={ImagesIndex} />
+        <Stack.Screen
+          name="ImagesIndex"
+          component={ImagesIndex}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="ImageDetails" component={ImageDetails} />
       </Stack.Navigator>
     </NavigationContainer>
