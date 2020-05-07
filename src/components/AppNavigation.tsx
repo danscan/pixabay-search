@@ -2,17 +2,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { ReactElement } from 'react';
 import ImageDetails from '../screens/ImageDetails';
-import ImagesIndex from '../screens/ImagesIndex';
+import ImageSearch from '../screens/ImageSearch';
 
 const Stack = createStackNavigator();
 
 export default function AppNavigation(): ReactElement {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ImagesIndex">
+      <Stack.Navigator initialRouteName="ImageSearch">
         <Stack.Screen
-          name="ImagesIndex"
-          component={ImagesIndex}
+          name="ImageSearch"
+          component={ImageSearch}
           options={{ headerShown: false }}
         />
         <Stack.Screen name="ImageDetails" component={ImageDetails} />

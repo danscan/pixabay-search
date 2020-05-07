@@ -1,4 +1,26 @@
-declare type ImageType = {
+declare type PixabayCategory =
+  | 'animals'
+  | 'backgrounds'
+  | 'buildings'
+  | 'business'
+  | 'computer'
+  | 'education'
+  | 'fashion'
+  | 'feelings'
+  | 'food'
+  | 'health'
+  | 'industry'
+  | 'music'
+  | 'nature'
+  | 'people'
+  | 'places'
+  | 'religion'
+  | 'science'
+  | 'sports'
+  | 'transportation'
+  | 'travel';
+
+declare type PixabayImage = {
   comments: number;
   downloads: number;
   favorites: number;
@@ -21,4 +43,10 @@ declare type ImageType = {
   webformatHeight: number;
   webformatURL: string;
   webformatWidth: number;
+};
+
+declare type PixabayImageQueryOptions = {
+  category?: PixabayCategory;
+  q?: string;
+  sfw?: boolean;
 };

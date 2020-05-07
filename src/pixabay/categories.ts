@@ -1,4 +1,4 @@
-const DEFAULT_SEARCHES = [
+const CATEGORIES: PixabayCategory[] = [
   'animals',
   'backgrounds',
   'buildings',
@@ -21,8 +21,4 @@ const DEFAULT_SEARCHES = [
   'travel',
 ];
 
-export default function getDefaultSearch(): string {
-  const index = Math.floor(Math.random() * DEFAULT_SEARCHES.length);
-
-  return DEFAULT_SEARCHES[index];
-}
+export default CATEGORIES;
