@@ -3,13 +3,13 @@ import React, { ReactElement } from 'react';
 import {
   FlatList,
   FlatListProperties,
-  Image,
+  StyleSheet,
   TouchableOpacity,
   useWindowDimensions,
-  StyleSheet,
 } from 'react-native';
 import { colors, t } from 'react-native-tailwindcss';
 import useWindowIsLandscape from '../hooks/useWindowIsLandscape';
+import Image from './Image';
 
 interface ImagesIndexListProps
   extends Omit<FlatListProperties<PixabayImage>, 'data' | 'renderItem'> {
@@ -37,6 +37,7 @@ export default function ImagesIndexList({
       keyboardDismissMode="interactive"
       keyboardShouldPersistTaps="handled"
       keyExtractor={({ id }): string => String(id)}
+      initialNumToRender={12}
       {...flatListProps}
       columnWrapperStyle={[t.justifyCenter]}
       renderItem={({ item }): ReactElement => (
@@ -47,13 +48,13 @@ export default function ImagesIndexList({
               { aspectRatio: 1, width: squareSize },
               {
                 borderWidth: StyleSheet.hairlineWidth,
-                borderColor: colors.gray900,
+                borderColor: colors.white,
               },
+              t.bgGray400,
             ]}
           />
         </TouchableOpacity>
       )}
-      contentContainerStyle={t.bgGray900}
       style={t.flex1}
     />
   );

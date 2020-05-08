@@ -1,19 +1,5 @@
-const { default: ModularRemScale } = require('@danscan/modular-scale');
-
-const spatialScaleMap = new ModularRemScale({
-  firstPower: -1,
-  ratio: 'perfect-fifth',
-  rootFontSizePx: 16,
-}).getMap();
-
 module.exports = {
   theme: {
-    extend: {
-      spacing: spatialScaleMap,
-      fontSize: spatialScaleMap,
-      maxWidth: spatialScaleMap,
-    },
-
     colors: {
       // Tailwind Defaults
       transparent: 'transparent',

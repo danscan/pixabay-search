@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import axios, { AxiosResponse } from 'axios';
 import { InfiniteQueryResult, useInfiniteQuery } from 'react-query';
-
-const API_URL = 'https://pixabay.com/api/';
-const API_KEY = '16281924-f056639bb347e838973c8cedf';
+import { API_KEY, API_URL } from '../pixabay/api';
 
 type ImagesResponse = {
   total: number;
@@ -13,11 +11,15 @@ type ImagesResponse = {
 
 export default function useImageQuery({
   category,
-  color,
   q,
   sfw,
 }: PixabayImageQueryOptions): InfiniteQueryResult<PixabayImage[], number> {
-  return useInfiniteQuery([q, category, color, sfw], fetchImages, {
+  return useInfiniteQuery([q, category, sfw], fetchImages, {
+    // Don't auto-refetch the query unless the query key changes
+    refetchInterval: false,
+    refetchIntervalInBackground: false,
+    refetchOnWindowFocus: false,
+
     // Fetch the next page unless the last page was empty
     getFetchMore: (lastPage, allPages) =>
       lastPage.length ? allPages.length + 1 : false,
@@ -31,20 +33,19 @@ interface CancellablePromise<T> extends Promise<T> {
 function fetchImages(
   q?: string,
   category?: PixabayCategory,
-  color?: PixabayColor,
   sfw?: boolean,
   page?: number
 ): CancellablePromise<PixabayImage[]> {
   const cancelTokenSource = axios.CancelToken.source();
 
   const promise: CancellablePromise<PixabayImage[]> = axios
-    .get<any, AxiosResponse<ImagesResponse>>(API_URL, {
+    .get<unknown, AxiosResponse<ImagesResponse>>(API_URL, {
       cancelToken: cancelTokenSource.token,
       params: {
         category,
-        colors: color,
         key: API_KEY,
         page,
+        per_page: 40,
         q: q || undefined,
         safesearch: sfw,
       },

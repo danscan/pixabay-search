@@ -46,7 +46,7 @@
 		00E356F21AD99517003FC87E /* ImageSearch101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSearch101Tests.m; sourceTree = "<group>"; };
 		01DA07C89866F1E92CD823DC /* Pods-ImageSearch101-ImageSearch101Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch101-ImageSearch101Tests.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch101-ImageSearch101Tests/Pods-ImageSearch101-ImageSearch101Tests.release.xcconfig"; sourceTree = "<group>"; };
 		02394EF4B6FA68D93BBC5053 /* Pods-ImageSearch101-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch101-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch101-tvOS/Pods-ImageSearch101-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ImageSearch101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Pixabay Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixabay Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageSearch101/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageSearch101/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ImageSearch101.app */,
+				13B07F961A680F5B00A75B9A /* Pixabay Search.app */,
 				00E356EE1AD99517003FC87E /* ImageSearch101Tests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* ImageSearch101-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* ImageSearch101-tvOSTests.xctest */,
@@ -194,7 +194,6 @@
 				84AB569FA8FD6430C4824E3E /* Pods-ImageSearch101-tvOSTests.debug.xcconfig */,
 				D03E6D64E94B9EB67F6A9E94 /* Pods-ImageSearch101-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -237,7 +236,7 @@
 			);
 			name = ImageSearch101;
 			productName = ImageSearch101;
-			productReference = 13B07F961A680F5B00A75B9A /* ImageSearch101.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Pixabay Search.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* ImageSearch101-tvOS */ = {
@@ -642,8 +641,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ImageSearch101;
+				PRODUCT_BUNDLE_IDENTIFIER = co.101edu.ImageSearch;
+				PRODUCT_NAME = "Pixabay Search";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -664,8 +663,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ImageSearch101;
+				PRODUCT_BUNDLE_IDENTIFIER = co.101edu.ImageSearch;
+				PRODUCT_NAME = "Pixabay Search";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

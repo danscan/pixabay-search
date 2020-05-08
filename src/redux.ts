@@ -26,7 +26,7 @@ const initialQueryOptions: PixabayImageQueryOptions = {
   sfw: true,
 };
 
-// Reducer
+// Query Options Reducer
 export type RootState = ReturnType<typeof rootReducer>;
 const queryOptions = createReducer(initialQueryOptions, {
   [actions.queryOptionsSetQuery.type]: (
@@ -44,6 +44,8 @@ const queryOptions = createReducer(initialQueryOptions, {
     action: PayloadAction<PixabayImageQueryOptions['sfw']>
   ) => ({ ...state, sfw: action.payload }),
 });
+
+// Root Reducer
 const rootReducer = combineReducers({
   queryOptions,
 });
