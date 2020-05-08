@@ -21,7 +21,7 @@ export default function AppNavigation(): ReactElement {
           component={ImageDetails}
           options={{
             headerTitleStyle: t.hidden,
-            headerStyle: [t.bgBlack, t.shadowNone],
+            headerStyle: [t.bgBlack],
             headerTintColor: colors.white,
           }}
         />
