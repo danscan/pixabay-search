@@ -45,7 +45,7 @@ export default function ScreenImageDetails(): ReactElement {
             {image.tags.split(', ').map((tag) => (
               <View
                 key={tag}
-                style={[t.bgGray700, t.p2, t.textSm, t.rounded, t.mR3]}
+                style={[t.bgGray700, t.p2, t.rounded, t.mB3, t.mR3]}
               >
                 <Text style={t.textWhite}>#{tag}</Text>
               </View>
