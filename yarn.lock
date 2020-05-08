@@ -697,11 +697,6 @@
     "@typescript-eslint/parser" "^2.28.0"
     typescript "^3.8.3"
 
-"@danscan/modular-scale@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@danscan/modular-scale/-/modular-scale-0.1.0.tgz#6807c14bd3ec63d4224f2058f138330fb78ebd15"
-  integrity sha512-smWFRTDhPQ90BMrmw+1S3SRb2Ep7UIQvoox5YUE020Itr0G+z3ugyltYSIkhb0rv8t5gzO8fIIp6I46qS8zQgw==
-
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"

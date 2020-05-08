@@ -6,12 +6,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "generate-tailwind-types": "node ./build-utils/generate-tailwind-types.js"
   },
   "dependencies": {
-    "@danscan/modular-scale": "^0.1.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.1.7",
     "@react-navigation/stack": "^5.2.14",
