@@ -35,7 +35,7 @@ export default function QueryOptionsCarousel(): ReactElement {
     <View style={[t.flexRow, t.itemsCenter]}>
       <View style={[t.borderR, t.borderGray400, t.pR3]}>
         <QueryOptionToggle
-          active={!currentSFW}
+          active
           onPress={(): void => setSFW(!currentSFW)}
           text={currentSFW ? 'SFW' : 'NSFW'}
         />
